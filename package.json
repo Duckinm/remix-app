@@ -9,7 +9,9 @@
     "postinstall": "remix setup node",
     "start": "remix-serve build",
     "tailwind:watch": "npx tailwindcss -o app/styles/tailwind.css --watch",
-    "tailwind:build": "cross-env NODE_ENV=production npx tailwindcss -o app/styles/tailwind.css --minify"
+    "tailwind:build": "cross-env NODE_ENV=production npx tailwindcss -o app/styles/tailwind.css --minify",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@remix-run/react": "^0.20.1",
@@ -24,12 +26,28 @@
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
     "autoprefixer": "^10.4.0",
+    "eslint": "^8.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
     "tailwindcss": "^3.0.0-alpha.1",
     "typescript": "^4.4.4"
   },
   "engines": {
-    "node": ">=14"
+    "node": "16"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "prettier": {
+    "semi": false,
+    "printWidth": 200,
+    "arrowParens": "always",
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }
