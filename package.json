@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "start": "remix-serve build",
+    "tailwind:watch": "npx tailwindcss -o app/styles/tailwind.css --watch",
+    "tailwind:build": "cross-env NODE_ENV=production npx tailwindcss -o app/styles/tailwind.css --minify"
+  },
+  "dependencies": {
+    "@remix-run/react": "^0.20.1",
+    "@remix-run/serve": "^0.20.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.0-beta.8",
+    "remix": "^0.20.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^0.20.1",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^3.0.0-alpha.1",
+    "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}
