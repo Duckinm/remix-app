@@ -3,7 +3,7 @@
     "allowJs": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "baseUrl": "./app",
+    "baseUrl": "./",
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
